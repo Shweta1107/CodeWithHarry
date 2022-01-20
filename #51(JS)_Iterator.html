@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log("iterator");
+
+      function fruitIterator(value){
+
+          let nextIndex = 0;
+          //we will return an object
+          return{
+              next:function(){
+                  if(nextIndex < value.length){
+                      return{
+                          value: value[nextIndex++],
+                          done:false,
+                      }
+                  }
+                  else{
+                      return{
+                          done:true
+                  }
+              }
+          }
+
+      }
+    }
+
+      const myArray = ["Apple","Grapes","Orange","Bindi"]
+      console.log(myArray);
+
+      //Using iterator
+      const fruit = fruitIterator(myArray);
+      console.log(fruit.next())
+      console.log(fruit.next())
+      console.log(fruit.next())
+      console.log(fruit.next())
+      console.log(fruit.next())
+    </script>
+  </body>
+</html>

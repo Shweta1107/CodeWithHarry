@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>events</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="heading" class="yourhead re black">
+        Welcome to shweta with code
+      </h1>
+      <div id="myfirst" class="child red good" id="first">
+        child 1
+        <ul class="this" id="myul">
+          <li class="childul" id="fui">this</li>
+          <li class="childul">this</li>
+          <li class="childul">this</li>
+          <li class="childul" id="lui">print</li>
+        </ul>
+      </div>
+      <div class="child">child 2</div>
+      <div class="child">child 3</div>
+      <div class="child">child 4</div>
+      <div class="child">child 5</div>
+
+      <form action="none.html">
+        <a href="https://www.google.com">Google</a>
+        <!-- <a href= "https://www.google.com">Google</a>
+           <a href= "https://www.google.com">Google</a>
+           <a href= "https://www.google.com">Google</a> -->
+        <br />
+        <br />
+        <!-- <button id ="btn">Sbmit form</button> -->
+        <input type="submit" id="btn" value="submit" />
+      </form>
+    </div>
+    <br />
+    <div class="no">this is a dummy div 1</div>
+    <div class="no">this is a dummy div 2</div>
+    <div class="no">this is a dummy div 3</div>
+
+    <script>
+      
+      /*
+    You have to create a div and inject it into the page which contains a heading.
+     whenever someone clicks on the div, it should be converted into an editable item. whenever user clicks away (blur). save the note into the local storage.
+    */
+
+     //Crete a new element
+      let divElem = document.createElement('div')
+
+      //Add text to that creted element
+      let val = localStorage.getItem('text');
+      let text;
+      if(val==null){
+      let text = document.createTextNode('This is my element click to here ')
+      }
+      else{
+       text = document.createTextNode(val);
+      }
+      divElem.appendChild(text);
+
+      //Give element id, style, class
+      divElem.setAttribute('id','elem');
+      divElem.setAttribute('class','elem');
+      divElem.setAttribute('style','border:2px solid black; width:154px; margin:12px; padding:23px;')
+
+      //Grab the main container
+      let container = document.querySelector('.container')
+      let first  = document.querySelector('#myfirst')
+
+      //Insert the element before with id first
+      container.insertBefore(divElem,first);
+      console.log(divElem , container , first)
+
+      //Add event listner to the div element
+      divElem.addEventListener('click',function()
+      {
+          let noTextArea = document.getElementsByClassName('textarea').length;
+          if(noTextArea ===0 )
+          {
+           let html = elem.innerHtml;
+           divElem.innerHTML = `<textarea class="textarea form-control" id="textarea" rows="3">${html}</textarea>`
+          }
+
+          //listner to the blur event on textarea
+          let textarea = document.getElementById('textarea');
+          textarea.addEventListner('blur',function()
+          {
+              elem.innerHTML = textarea.value;
+              localStorage.setItem('text',textarea.value)
+          })
+      });
+
+
+    </script>
+  </body>
+</html>

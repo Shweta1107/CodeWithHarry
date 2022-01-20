@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shweta Gym Website!!!...</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Saira+Condensed:wght@100&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Baloo Bhai 2', cursive;
+            margin: 0px;
+            padding: 0px;
+            color: white;
+            background-image: url('https://media.istockphoto.com/photos/beautiful-fit-woman-works-out-in-a-fitness-gym-picture-id941698722')
+        }
+
+        .left {
+            /* border: 2px solid red; */ /* Border is imp*/
+            display: inline-block;
+            position: absolute;
+            left: 34px; /* margin from left*/
+            top: 20px; /* margin from top*/
+             }
+             .left img{
+                 width:119px;
+                 height: 44%;
+                 text-align: center;
+                 margin: 0 19px;
+             }
+             .left div{
+                 text-align: center;
+                 line-height: 30px;
+                 font-size: 23px;
+             }
+        .mid {
+            /* border: 2px solid green; */  /* Border is imp*/
+            display:block;
+            width:39%;
+            margin: 20px auto;
+            top:30px;
+          
+        }
+
+        .right {
+            /* border: 2px solid blueviolet; */  /* Border is imp*/
+            display: inline-block;
+            position: absolute;
+            right: 34px;
+            top: 30px;
+           
+        }
+        .right .btn{
+            font-family: 'Baloo Bhai 2', cursive;
+           margin: 0 10px;
+           padding: 6px 12px;
+           border-radius: 6px;
+           font-size:19px;
+           cursor: pointer;
+           color: white;
+            background-color: black;
+            border-color: whitesmoke;
+            
+            
+
+        }
+        .right .btn:hover{
+            background-color: rgb(197, 187, 187);
+        }
+        .navbar li
+        {
+            display: inline-block;
+            font-size: 19px;
+        }
+        .navbar li a{
+            text-decoration: none;
+            color:white;
+            padding: 14px 9px;
+        }
+        .navbar li a:hover,  .navbar li a.active
+        {
+          text-decoration: underline;
+          color: rgb(196, 189, 189);
+        }
+        .container
+        {
+            /* border: 2px solid yellow; */  /* Border is imp*/
+            margin :150px 20px;
+            padding :25px 70px;
+         
+            display:block;
+            width:39%;
+            margin: 90px auto;
+            font-size:13px;
+            height:50%;
+            
+        }
+        .container h1{
+             text-align: center;
+        
+        }
+        .form-group input{
+            font-family: 'Baloo Bhai 2', cursive;
+            font-size: 19px;
+            text-align: center;
+            display:block;
+            width:53%;
+            margin:11px auto;
+            border-radius: 9px;
+            cursor: pointer;
+        }
+         input:hover
+        {
+           color:gray;
+        }
+        .container button{
+            display: block;
+            width:23%;
+            /* margin:auto; */
+            margin:21px auto;
+            border-radius: 9px;
+            padding:12px;
+            background-color: blueviolet;
+            color: white;
+            font-size: 19px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+         <!-- Left part -->
+        <div class="left">
+            <img src="https://i.pinimg.com/originals/cd/a2/08/cda2081dfd2b1af5c0444a032294965c.png">
+            <div>Shweta's Fitness</div>
+        </div>
+
+         <!-- Mid Part -->
+        <div class="mid">
+           
+            <ul class="navbar">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Fitness Calculator</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+
+           <!-- Right Part -->
+        <div class="right">
+            <button class="btn">Call Us Now</button>
+            <button class="btn">Email Us</button>
+           </div>
+    </header>
+
+    <!-- Form k liye Container -->
+
+    <div class="container">
+       <h1>The secret of getting ahead is getting started...Join Now ! ! !</h1>
+       <form action="noaction.php">
+           <div class="form-group">
+               <input type="text" placeholder="Enter Your Name">
+               <input type="text" placeholder="Enter Your Age">
+               <input type="text" placeholder="Enter Your Gender">
+               <input type="text" placeholder="Enter Your Locality">
+               <input type="text" placeholder="Enter Your Phone Number">
+               <input type="text" placeholder="Enter Your Email Id">
+           </div>
+           <button class="btn">Submit</button>
+
+       </form>
+    </div>
+</body>
+
+</html>

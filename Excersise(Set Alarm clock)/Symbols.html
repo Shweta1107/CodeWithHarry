@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symbols</title>
+    <script>
+        const symbol1 = Symbol('My identifier');
+        const symbol2 = Symbol('My identifier');
+        console.log(symbol1 === symbol2) //false;
+
+        const k1 = Symbol('hello');
+        const k2 = Symbol('kill');
+
+        let myobj = {};
+        myobj[k1] = "Shweta",
+        myobj[k2] = "Bharti",
+        myobj["name"] = "Good bye"
+        myobj["hello"] = "Shweta"
+
+        console.log(myobj)
+        console.log(myobj[k2]) //Bharti
+
+        /***********************************for in loop it ignore the symbols***********************/
+
+        for(key in myobj){
+            console.log(key,myobj[key]);
+        }
+
+        //object to JSON
+        console.log(JSON.stringify(myobj))
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

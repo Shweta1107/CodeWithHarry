@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to shweta with code</h1>
+        <div id="myfirst" class="child red good" id ="first">child 1
+            <ul class="this" id = "myul">
+                <li class="childul" id="fui">this</li>
+                <li class="childul">this</li>
+                <li class="childul">this</li>
+                <li class="childul" id="lui">print</li>
+            </ul>
+        </div>
+        <div class="child">child 2</div>
+        <div class="child">child 3</div>
+        <div class="child">child 4</div>
+        <div class="child">child 5</div>
+
+        <form action="none.html">
+           <a href= "www.google.com">Google</a>
+           <br>
+           <br>
+          <button>Button</button>
+        </form>
+     </div>
+<br>
+     <div class="no">this is a dummy div 1</div>
+     <div class="no">this is a dummy div 2</div>
+    <div class="no">this is a dummy div 3</div>
+
+    <script>
+     
+     //Creating
+     let element = document.createElement('li');
+     //Add a class name to the li element
+      element.className = 'childul';
+      element.id = 'createLi';
+      element.setAttribute('title', 'mytitle')
+       let text = document.createTextNode('hello i m shweta')//element.innerText = 'hello i m shweta';
+       element.appendChild(text);
+
+      let ul = document.querySelector('ul.this')
+      ul.appendChild(element); //Append in our DOM
+      //console.log(ul);
+     //console.log(element);
+
+
+     //Replaceing with other element
+      let elem2 = document.createElement('h3');
+      elem2.className = "sm";
+      elem2.id = "sm";
+      let text2 = document.createTextNode('Fantactic');
+      elem2.appendChild(text2);
+      console.log(elem2);
+
+      element.replaceWith(elem2); //element k jagah elem2 aa gya 
+     
+      //Replaceing with other child
+      let myul = document.getElementById('myul');
+      myul.replaceChild(element,document.getElementById('fui'))
+      myul.removeChild(document.getElementById('lui'));
+      elem2.removeAttribute('id');
+      console.log(elem2)
+    
+
+    </script>
+
+    </body>
+    </html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello world !!</h1>
+    <script>
+       console.log("Lets Start !!");
+
+       let reg = /harry/; //This is a regular expression literals in JS .
+    //    reg = /harry/g; // g means global
+      //  reg = /harry/i; // case insensitivity
+
+    //   console.log(reg);
+    //   console.log(reg.source);
+    
+    let s = "This is great code with harry and also harry bhai";
+    //Function to match expression
+
+    //1. exec() -> This function will return an array for match or null for no matc
+    let result = reg.exec(s);
+    // console.log(result);
+    //  result = reg.exec(s);
+    // console.log(result);
+    // result = reg.exec(s);
+    // console.log(result); -> we can use multiple exec with global flag
+
+    //2. test() -> Return true or false
+    let result2 = reg.test(s);
+     //console.log(result2); // it return true if reg is there in the regular expression else false
+
+     //3. match() -> it will return an array of result or null
+     let result3 = s.match(reg);
+     //console.log(result3);
+
+     //4. search() ->Return index of first match else -1
+     let result4 = s.search(reg);
+     console.log(result4);
+
+     //5. replace() -> return new replaced string with all the replacements
+     let result5 = s.replace(reg, 'shweta');
+     console.log(result5);
+
+    </script>
+</body>
+</html>

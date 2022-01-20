@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        #btn
+        {
+            color: white;
+            background-color: blueviolet;
+            padding: 3px;
+            border-radius: 8px;
+        }
+    </style>
+  </head>
+  <body>
+    <!--Browser events:
+    click
+    contentmenu
+    mouseover
+    mouseout
+    mousemove
+
+    submit
+    focus
+
+    DOMContentLoaded
+
+    transitionend
+    -->
+    <div class="conatiner">
+        <h1>This is my heading</h1>
+      <p id="para">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo vel
+        aspernatur nihil at quis deleniti ad animi facilis nesciunt quisquam!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo vel
+        aspernatur nihil at quis deleniti ad animi facilis nesciunt quisquam!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo vel
+        aspernatur nihil at quis deleniti ad animi facilis nesciunt quisquam!
+      </p>
+    </div>
+    <button id="btn" onclick="shweta()">Show/Hide</button>
+     <script>
+          let para = document.getElementById('para');
+          para.addEventListener('mouseover', function run()
+          {
+              console.log('Mouse inside')
+          });
+
+          para.addEventListener('mouseout', function run()
+          {
+              console.log('Mouse now went outside')
+          });
+
+    function shweta()
+    {
+        let x = document.getElementById('btn')
+        let y = document.getElementById('para')
+
+        if(para.style.display != 'none')
+        {
+            para.style.display = 'none';
+        }
+        else{
+            para.style.display = 'block';
+        }
+
+    }
+    </script>
+  </body>
+</html>

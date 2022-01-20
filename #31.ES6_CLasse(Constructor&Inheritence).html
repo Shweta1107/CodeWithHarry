@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 - Constructor & Inheritence</title>
+</head>
+<body>
+    <h1>Hello gys Chay Pi lo</h1>
+
+    <script>
+       console.log('this is tuts 31 ');
+
+       class Employee
+       {
+           constructor(givenName , givenExperience , givenDivision){
+               this.name = givenName;
+               this.experience = givenExperience;
+               this.division = givenDivision;
+           }
+
+           slogan(){
+                return `I am ${this.name} and this company is best :`
+                         
+
+           }
+
+           joiningYear()
+           {
+               return 2020-this.experience;
+           }
+           static add(a,b)
+           {
+               return a+b;
+           }
+       }
+    
+      class Programmer extends Employee
+    {
+        constructor(givenName , givenExperience , givenDivision, language, github){
+            super(givenName , givenExperience , givenDivision);
+            this.language1 = language;
+            this.github1 = github;
+        }
+        favLang()
+        {
+           return 'Java Script'
+        }
+        slogan(){
+               return `I am ${this.name} and this company is best :`
+           }
+        static multiply(a,b){
+            return a*b;
+        }
+     
+    }
+      /* Class Employee */
+       shweta = new Employee('shweta',2, 'division'); //object 
+       console.log(shweta.joiningYear());
+       console.log(shweta.slogan());
+      console.log(Employee.add(2,5));
+
+      /*Class Programmer */
+      bharti = new Programmer('bharti',3 ,'9th', 'hindi','@',); //object
+      console.log(bharti.favLang());
+      console.log(bharti.slogan());
+      console.log(Programmer.multiply(2,3))
+
+    </script>
+</body>
+</html>

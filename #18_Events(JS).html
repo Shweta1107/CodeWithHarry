@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="heading" class="yourhead re black">Welcome to shweta with code</h1>
+        <div id="myfirst" class="child red good" id ="first">child 1
+            <ul class="this" id = "myul">
+                <li class="childul" id="fui">this</li>
+                <li class="childul">this</li>
+                <li class="childul">this</li>
+                <li class="childul" id="lui">print</li>
+            </ul>
+        </div>
+        <div class="child">child 2</div>
+        <div class="child">child 3</div>
+        <div class="child">child 4</div>
+        <div class="child">child 5</div>
+
+        <form action="none.html">
+           <a href= "https://www.google.com">Google</a>
+           <!-- <a href= "https://www.google.com">Google</a>
+           <a href= "https://www.google.com">Google</a>
+           <a href= "https://www.google.com">Google</a> -->
+           <br>
+           <br>
+          <!-- <button id ="btn">Sbmit form</button> -->
+          <input type ="submit" id="btn" value="submit">
+        </form>
+     </div>
+<br>
+     <div class="no">this is a dummy div 1</div>
+     <div class="no">this is a dummy div 2</div>
+    <div class="no">this is a dummy div 3</div>
+
+    <script>
+        //   let btn = document.getElementById('btn')
+        //   btn.addEventListener('click',func1);
+        //   btn.addEventListener('dbclick',func2);
+        //   btn.addEventListener('mousedown',func3);
+
+
+        //   function func1(e)
+        //   {
+        //     console.log('Thanks',e);
+        //      e.preventDefault();
+        //   }
+        //   function func2(e)
+        //   {
+        //      console.log('Thanks its A DOuble click',e);
+        //      e.preventDefault();
+        //   }
+        //   function func3(e)
+        //   {
+        //      console.log('Thanks its MOUSE DOUN click',e);
+        //      e.preventDefault();
+        //   }
+
+        // document.querySelector('.no').addEventListener('mouseenter',function()
+        // {
+        //     //console.log('you entered')
+        // })
+
+        // document.querySelector('.no').addEventListener('mouseleave',function()
+        // {
+        //     //console.log('you get out')
+        // })
+
+        // document.querySelector('.container').addEventListener('mousemove',function()
+        // {
+        //     console.log('you triggred mouse move event')
+        // })
+
+
+        /*EXCERSICE 1 QUESTION #19 TUTS HARRY BHAI*/ VVVIIIII
+
+        // 1. Using for loop
+        let links = document.links;
+               // console.log(link)
+         for(let i=0;i<links.length;i++)
+         {
+            const element = links[i];
+            if(element.href.includes('google'))
+            {
+                console.log(element.href);
+            }
+         }
+
+        //  2.Using for each loop
+        let str='google';
+        let link = document.links
+        // console.log(link) 
+        Array.from(link).forEach(function(element)
+        {
+            // console.log(element.href);
+            if(element.href.includes(str))
+            console.log(element.href)
+           
+        })
+    </script>
+    </body>
+    </html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container
+        {
+            border:2px solid blue;
+            display:block;
+            width:50%;
+            margin:auto;
+        }
+        input{
+            display:block;
+            margin:12px;
+        }
+        input[type="text"]
+        {
+            border:2px solid red;
+        }
+        a[target]
+        {
+            color: darkgreen;
+            font-size:20px;
+        }
+        a[target='self']
+        {
+            font-size:10px;
+        }
+        input[type="email"]
+        {
+          color:yellow;
+          border:2px solid rgb(0, 255, 34);
+        }
+        li:nth-child(3)
+        {
+            color:tomato;
+        }
+        li:nth-child(2n+1)
+        {
+            color: violet;
+        }
+        li:nth-child(3n+3)
+        {
+            color:red;
+        }
+        li:nth-child(even)
+        {
+            background-color: navy;
+        }
+        li:nth-child(odd)
+        {
+            background-color:olive;
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+       <a href="http://google.com"target="_blank">Google</a><br>
+       <a href="http://facebook.com"target="_self">Facebook</a>
+       <form action="" class=form-control>
+           <input type="text" placeholder="enter your name">
+           <input type="password" placeholder="enter your password">
+           <input type="email" placeholder="enter your Email">
+          <input type="button" value="Submit">
+       </form>
+       <ul>
+          <li class="item" id="item1">item-1</li>
+          <li class="item" id="item2">item-2</li>
+          <li class="item" id="item3">item-3</li>
+          <li class="item" id="item4">item-4</li>
+          <li class="item" id="item5">item-5</li>
+          <li class="item" id="item6">item-6</li>
+          <li class="item" id="item7">item-7</li>
+          <li class="item" id="item8">item-8</li>
+          <li class="item" id="item9">item-9</li>
+       </ul>
+   </div>
+
+
+
+
+</body>
+</html>

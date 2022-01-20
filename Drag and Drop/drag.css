@@ -1,0 +1,31 @@
+body{
+    background: rgb(132, 207, 136);
+}
+.imgBox{
+    background-image: url('icon.jpg');
+    position:relative;
+    top:7px;
+    left:5px;
+    height:45px;
+    width:45px;
+    cursor:pointer;
+}
+.whiteBox{
+    display:inline-block;
+    height:100px;
+    width:100px;
+    background-color: white;
+    margin:10px;
+    border:3px solid blue;
+}
+
+.hold{
+    border:solid red 4px;
+}
+.dashed{
+    background-color: rgb(211, 60, 68);
+    border-style:dashed;
+}
+.hide{
+    display:none;
+}

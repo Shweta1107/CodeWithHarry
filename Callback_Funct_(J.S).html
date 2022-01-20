@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <h1>Students List: </h1>
+    <ul id="students"></ul>
+    
+
+
+    <script>
+      const students =[
+          {name: "Harry", subject: "javascript"},
+          {name: "Rohan", subject: "Machine learning"}
+      ]
+
+      function enrollStudent(student , callback){
+          setTimeout(function(){
+              students.push(student);
+              console.log("Student have been enrolled ")
+              callback();
+          },1000);
+      }
+
+      function getStudents(){
+          setTimeout(function(){
+              let str = "";
+              students.forEach(function(student){
+                  str +=`<li ${student.name} </li>` 
+              });
+              document.getElementById('students').innerHTML = str;
+              console.log("Student have been fetched ")
+
+          },5000);
+      }
+
+      let newStudent = {name:"Sunny",subject:"Python"}
+      enrollStudent(newStudent,getStudents);
+      //getStudents();
+ 
+    //   Callback function : Function which contains Another function as a Argument for Calling(Invoking)
+      
+    </script>
+</body>
+</html>

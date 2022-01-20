@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to shweta with code</h1>
+        <div id="myfirst" class="child red good" id ="first">child 1
+            <ul class="this">
+                <li class="link1">this</li>
+                <li class="link2">this</li>
+                <li class="link3">this</li>
+                <li class="link4">this</li>
+            </ul>
+        </div>
+        <div class="child">child 2</div>
+        <div class="child">child 3</div>
+        <div class="child">child 4</div>
+        <div class="child">child 5</div>
+
+        <form action="none.html">
+           <a href= "www.google.com">Google</a>
+           <br>
+           <br>
+          <button>Button</button>
+        </form>
+     </div>
+<br>
+     <div class="no">this is a dummy div 1</div>
+     <div class="no">this is a dummy div 2</div>
+    <div class="no">this is a dummy div 3</div>
+
+    <script>
+        let cont = document.querySelector('.no')
+         cont = document.querySelector('.container')
+         let nodeName = cont.childNodes[1].nodeName;
+         let nodeType = cont.childNodes[1].nodeType;
+
+         console.log(nodeName)
+         console.log(nodeType)
+         /*NODE TYPE
+             1. element
+             2. Attribute
+             3. Text node
+             8 comment
+             9. document
+             10. dicType
+        */
+
+        //console.log(cont.childNodes); //it includes text, comment also
+          //console.log(cont.children); //it did'nt include. (when we want total children)
+
+          let container = document.querySelector('.container');
+        //   console.log(container.children[1].children[0].children);
+        //    console.log(container.firstChild)  //it includes text, comment also
+       // console.log(container.firstElementChild)  (when we want first children)
+          //     console.log(container.lastChild)
+    //    console.log(container.lastElementChild)
+
+    //   console.log(container.children); //length =7
+    //   console.log(container.childElementCount); // 7
+ 
+    console.log(container.firstElementChild.parentNode); //container
+    console.log(container.firstElementChild.nextElementSibling.nextElementSibling); //
+    
+
+      
+
+
+    
+    </script>
+
+
+
+    </body>
+    </html>

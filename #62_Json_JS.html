@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let jsonObj = 
+        {
+            name: 'shweta',
+            channel: 'CWH',
+            food:'Bhindi'
+        }
+        // console.log(jsonObj)
+
+        let myJsonStr = JSON.stringify(jsonObj); //Object convers into String using (JSON.stringify)
+        console.log(myJsonStr);
+        
+        x = myJsonStr.replace('shweta','Bharti')
+        console.log(x);
+
+        newJsonObj = JSON.parse(myJsonStr);//Strings convers into Object using (JSON.parse)
+        console.log(newJsonObj);
+    </script>
+</body>
+</html>

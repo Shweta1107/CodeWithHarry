@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to shweta with code</h1>
+        <div id="myfirst" class="child red good" id ="first">child 1
+            <ul class="this">
+                <li class="link1">this</li>
+                <li class="link2">this</li>
+                <li class="link3">this</li>
+                <li class="link4">this</li>
+            </ul>
+        </div>
+        <div class="child">child 2</div>
+        <div class="child">child 3</div>
+        <div class="child">child 4</div>
+        <div class="child">child 5</div>
+
+        <form action="none.html">
+           <a href= "www.google.com">Google</a>
+           <br>
+           <br>
+          <button>Button</button>
+        </form>
+     </div>
+
+
+     <script>
+         /* ELEMENT SELECTOR
+               1. Single element selector
+               2. Multi element selector
+        */
+
+        //1. Single element selector
+           let element = document.getElementById('myfirst');
+           //element = element.className;
+           //element = element.childNodes;
+           //element = element.parentNode;
+           element.style.color = 'red';
+           //element.style.fontsize = "5rem"
+           element.innerText = 'Shweta is good girl'
+           element.innerHTML = '<b> Shweta is good girl</b>'
+           //console.log(element)
+
+           let sel = document.querySelector('#myfirst')
+           sel = document.querySelector('.child')
+           sel = document.querySelector('h1')
+           sel = document.querySelector('div')
+        //    sel = document.querySelector('.container')
+            sel.style.color ="purple"
+           //console.log(sel);
+
+           //Multi element selector
+           let elems = document.getElementsByClassName('child')
+           //console.log(elems); 1st way of getting child
+           //console.log(elems[0]);
+          elems = document.getElementsByClassName('container') /*2nd way*/
+        // console.log(elems[0].getElementsByClassName('child'))
+        elems = document.getElementsByTagName('div')
+        console.log(elems)
+
+    //    Array.from(elems).forEach (function(element)    //using forEach loop in function
+    //    {
+    //        console.log(element);
+
+    //    })
+
+    Array.from(elems).forEach(element=> //using forEach in Arrow function
+       {
+           console.log(element);
+
+       })
+     </script>
+
+</body>
+</html>

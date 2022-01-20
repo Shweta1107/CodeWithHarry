@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        Time now is <span id="time"></span>
+    </div>
+       <!-- setTimeout : Allow us to run the function onces after the interval of Time
+            setInterval : Allow us to run the fun. repeatedly after the interval of time -->
+
+    <script>
+    //  1. seTimeout
+   
+     function greet(name , bye)   //function of setTimeout
+     {
+         console.log("hello good morning "+name +" "+bye)
+     }
+     setTimeout(greet,5000,"shweta","Take care") //call of setTimeout function
+
+     //2. setInterval
+
+     function greet(name , bye)   //function of setInterval
+     {
+         console.log("hello good morning "+name +" "+bye)
+     }
+     setInterval(greet,5000,"shweta","Take care") //call of setInterval function
+
+     //how to display time 
+     function displayTime()
+     {
+         time = new Date();
+         console.log(time);
+         document.getElementById('time').innerHTML=time;
+     }
+     setInterval(displayTime , 1000)
+
+    
+    </script>
+</body>
+</html>

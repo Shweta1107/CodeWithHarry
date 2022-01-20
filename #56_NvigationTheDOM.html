@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" id="main">
+        <ul id="nav">
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>More About Us</li>
+        </ul>
+    </div>
+    <div class="container">
+        Another container
+    </div>
+    <script>
+        let main = document.getElementById('main');
+        console.log(main);
+
+        let nav = document.getElementById('nav')
+        console.log(nav);
+
+        let c1 = document.getElementsByClassName('container');
+        console.log(c1);
+        
+        let s2 = document.querySelector('#nav')
+        console.log(s2);
+        
+        let s3 = document.querySelectorAll('#nav>li')
+        console.log(s3);
+    </script>
+</body>
+</html>

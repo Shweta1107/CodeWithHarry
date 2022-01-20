@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello world</h1>
+
+    <script>
+        console.log("Hello world ");
+        let regx = /h[a-z]rry/;// can be any character from a to z
+         regx = /h[aty]rry/ // can be a , t, or y
+         regx = /h[^aty]rry/ //cannot be a , t, or y
+         regx = /h[^aty]rr[yYu]/ //cannot be a , t, or y + can be y , Y, or u
+         regx = /h[a-zA-Z]rr[yYu][0-9]/
+
+         //Quantifier - We use {}
+         regx = /har{2}y/ //r can occue exactly 2 times.
+         regx = /har{0,2}y/ //r can occue exactly 0,1,2 times.
+
+         //Groupings -> we use () for gropings
+         regx = /(har){2}([0-9]r){3}/
+
+        let str = "hary bhai"
+        str = "harhar1r2r4r bhai";
+
+        let result = regx.exec(str);
+       console.log("This result from exec is ",result)
+
+       if(regx.test(str)){
+
+        console.log(`The string ${str} matches the expression ${regx.source}`)
+       }
+       else{
+        console.log(`The string ${str} does not match the expression ${regx.source}`)
+
+       }
+    </script>
+</body>
+</html>

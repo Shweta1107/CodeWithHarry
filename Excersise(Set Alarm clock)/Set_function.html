@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set function</title>
+    <script>
+        const mySet = new Set(); //initialize a empty set
+
+        mySet.add('this')
+        mySet.add('that')
+        mySet.add('this')
+        mySet.add(345);
+        mySet.add(true)
+        console.log("Set are ", mySet);
+        console.log("Size are ", mySet.size);//4
+        console.log(mySet.has(345)); //true
+        mySet.delete('this')
+        console.log("Set are ", mySet);
+
+
+        //Use a constructor to initialize a set***************************
+        // let mySet2 = new Set([1,34,'this','that','this'])
+        // console.log(mySet2);
+
+        //Iterate  a set()
+        for(item of mySet){
+            console.log('item is ', item) //using for of loop
+        }
+
+        mySet.forEach((item)=>{ //using for each loop
+            console.log(item)
+        })
+
+        //Converting SET to Array
+        let mySetIntoArray = Array.from(mySet); //using array.from we can convert array into set
+        console.log(mySetIntoArray)
+
+         //Converting SET to Array
+        let curr = new Set(mySetIntoArray)
+        console.log(curr)//new Set() we can convert array into set
+
+        Arr = [1,2,2,5,5,6,2,9,8,7,4]; //delete duplicate element.
+        let newSet = new Set(Arr);
+        console.log(newSet); //converted to Set
+        let updatedArr = Array.from(newSet);
+        console.log(updatedArr)
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

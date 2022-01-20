@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+        .container
+        {
+            border:2px solid green;
+            height:300px;
+            display:flex; /* Initialize a container as Flex box*/
+
+          /* Properties of flex box*/
+
+            flex-direction: row; /* default value of flex dir.*/
+            /* flex-direction: column;
+            flex-direction: column-reverse;
+            flex-direction: row-reverse; */
+
+
+             /* flex-wrap: wrap; it wrap the items inside the container so that it does not overflow from container */
+            /* flex-wrap: wrap-reverse; */
+
+            /* justify-content: center;     /* center in horizontal dir*/
+            /* justify-content:end;
+           /*  justify-content: space-between;   /* Equal space b/w evey flexible items*/
+            /* justify-content: space-evenly; Equal space from left anf right end b/w evey items  */
+            
+
+            align-items: center;  /* center in vertical dir*/
+            align-items: flex-start;
+            align-items: flex-end;
+        }
+        .item
+        {
+            background-color: tomato;
+            border: 2px solid black;
+            margin:10px;
+            width:13%;
+            height:200px;
+        }
+        #item2
+        {
+            flex-basis: 260px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item" id="item1">First box</div>
+        <div class="item" id="item2">Second box</div>
+        <div class="item" id="item3">Third box</div>
+        <div class="item" id="item4">Fourth box</div>
+    </div>
+</body>
+</html>

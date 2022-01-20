@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello world !!</h1>
+
+    <script>
+       
+       console.log("Hello world");
+
+       let regx = /harry/;
+       //Metacharacter symbols**************
+        regx = /hardc/; //^ means expression will match if starts with
+        regx = /harrt$/ //$ means expression will match if ends with
+        regx = /h.rry/ //matches any one character
+        regx = /h*rry/ //matches zero or more character
+        regx = /ha?rryi?t/ //? after character it means that char is optional
+        regx = /h\*rry/
+
+       let str = "harry is a good boy and harry is code with harry";
+
+       let result = regx.exec(str);
+       console.log("This result from exec is ",result)
+
+       if(regx.test(str)){
+
+        console.log(`The string ${str} matches the expression ${regx.source}`)
+       }
+       else{
+        console.log(`The string ${str} does not match the expression ${regx.source}`)
+
+       }
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello gys</h1>
+    <script>
+      console.log("This is tutorial 32");
+      //QUESTION ***************
+      // create a class library and implement the following:
+      // constructor must take the book list as an argument
+      // getBookList()
+      // issueBook(bookname, user)
+      // returnBook(bookname)
+
+      class Library {
+        constructor(book1, book2, book3) {
+          this.bk1 = book1;
+          this.bk2 = book2;
+          this.bk3 = book3;
+        }
+
+        getBookList() {
+          console.log(this.bk1, this.bk2, this.bk3);
+        }
+
+        issueBook(bookName, user) {
+          console.log(`${user} has issued the book called ${bookName}`);
+        }
+
+        returnBook(bookName) {
+          return `The name of the book returned is ${bookName}`;
+        }
+      }
+      science = new Library("novel", "css", "js");
+      console.log(science);
+      console.log(science.getBookList());
+      console.log(science.issueBook("Love story", "Raj shree"));
+      console.log(science.returnBook("CSS"));
+    </script>
+  </body>
+</html>

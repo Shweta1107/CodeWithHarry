@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="heading" class="yourhead re black">Welcome to shweta with code</h1>
+        <div id="myfirst" class="child red good" id ="first">child 1
+            <ul class="this" id = "myul">
+                <li class="childul" id="fui">this</li>
+                <li class="childul">this</li>
+                <li class="childul">this</li>
+                <li class="childul" id="lui">print</li>
+            </ul>
+        </div>
+        <div class="child">child 2</div>
+        <div class="child">child 3</div>
+        <div class="child">child 4</div>
+        <div class="child">child 5</div>
+
+        <form action="none.html">
+           <a href= "www.google.com">Google</a>
+           <br>
+           <br>
+          <button>Button</button>
+        </form>
+     </div>
+<br>
+     <div class="no">this is a dummy div 1</div>
+     <div class="no">this is a dummy div 2</div>
+    <div class="no">this is a dummy div 3</div>
+
+
+
+    <script>
+        document.getElementById('heading').addEventListener('click',function(e)
+        {
+             console.log('you have clciked the heading')
+            // location.href="//www.google.com"
+            let variable = e.target;
+            variable = e.target.className;
+            variable = e.target.id;
+            variable = e.target.classList; 
+            variable = Array.from(e.target.classList);
+            console.log(variable);
+        });
+    </script>
+
+
+
+
+
+
+    </body>
+</html>

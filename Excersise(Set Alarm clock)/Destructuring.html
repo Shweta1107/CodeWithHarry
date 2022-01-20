@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //Destructuring
+        
+        let a,b;
+        [a,b] = [34, 564];
+        //console.log(a,b);
+
+        [a,b,c,...d] = [1,2,3,4,5,6,7]
+        // console.log(a);
+        // console.log(b)
+        //  console.log(c)
+        //  console.log(d)
+
+         //Array destructuring
+        // ({a,b,c,d} = {a:3, b:45,c:567, d:90,e:12,f:87})
+        //  console.log(a,b,c,d);
+
+         const fruits = ['Apple','Mangoes','Bananas','oragnge'];
+         [a,b,c,d] = fruits;
+         console.log(a,b,c,d);
+
+        //Object Destructuring
+        const laptop = {
+            model:'HP',
+            age: '22 days',
+            gender :'haha',
+            start : function(){
+                console.log('started');
+            }
+        }
+        const {model,age,gender,start} = laptop;
+        console.log(model,age,gender,start)
+        start()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
